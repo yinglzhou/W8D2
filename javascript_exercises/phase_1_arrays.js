@@ -53,10 +53,23 @@ Array.prototype.myEach = function(callback) {
     }
 } 
 
-let arr = [1, 2, 3]
+// let arr = [1, 2, 3]
 
-let exampleFunction = function(el){
-    console.log(el)
+// let exampleFunction = function(el){
+//     console.log(el)
+// }
+
+// arr.myEach(exampleFunction)
+
+
+Array.prototype.myMap = function(callback) {
+    let finalArr = [];
+
+    finalArr += athis.myEach(callback) 
+
+    return finalArr
 }
 
-arr.myEach(exampleFunction)
+let double = function(el){
+    2 * el
+}
