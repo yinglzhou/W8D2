@@ -45,3 +45,18 @@ Array.prototype.transpose = function() {
     }
     return finalArr
 }
+
+
+Array.prototype.myEach = function(callback) {
+    for (i = 0; i < this.length; i++) {
+        callback(this[i])
+    }
+} 
+
+let arr = [1, 2, 3]
+
+let exampleFunction = function(el){
+    console.log(el)
+}
+
+arr.myEach(exampleFunction)
